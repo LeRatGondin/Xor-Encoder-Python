@@ -12,4 +12,4 @@ pour creer le code chiffré
 ## Pour le dechiffrage
 Le script converti la clé en sha256 , et il refait le chifrement XOR mais dans l'autre sens pour pouvoir le decoder
 ### Screenshot
-![Alt text](https://www.zupimages.net/up/21/16/4fz7.png) 
+![Alt text](https://www.zupimages.net/up/21/16/i2qp.png) 
