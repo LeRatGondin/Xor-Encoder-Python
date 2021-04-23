@@ -1,2 +1,5 @@
 # Xor-Encoder-Python
-Un script pour chiffrer et déchiffrer une phrase
+<!-- GETTING STARTED -->
+### Langage utilisé 
+Python 
+## Systeme de chiffrage
