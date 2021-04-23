@@ -2,7 +2,7 @@
 ### Langage utilisé 
 Python 3.9.4
 ## Systeme de chiffrage
-Le systeme de chiffrage est le XOR qui a pour principe d'utiliser la fonction binaire OU exclusif ou plus souvent appellée ["XOR"](https://fr.wikipedia.org/wiki/Fonction_OU_exclusif).
+Le systeme de chiffrage est le [XOR](https://fr.wikipedia.org/wiki/Fonction_OU_exclusif) qui a pour principe d'utiliser la fonction binaire OU exclusif (A⊕B).
 
 # Comment ça marche ?
 ## Pour le chiffrage
