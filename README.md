@@ -1,8 +1,8 @@
 # Xor-Encoder-Python
 ### Langage utilisé 
-Python 
+Python 3.9.4
 ## Systeme de chiffrage
-Le systeme de chiffrage est le XOR qui a pour principe d'utiliser [la fonction binaire OU exclusif ou plus souvent appellée "XOR".](https://fr.wikipedia.org/wiki/Fonction_OU_exclusif)
+Le systeme de chiffrage est le XOR qui a pour principe d'utiliser la fonction binaire OU exclusif ou plus souvent appellée ["XOR"](https://fr.wikipedia.org/wiki/Fonction_OU_exclusif).
 
 # Comment ça marche ?
 ## Pour le chiffrage
