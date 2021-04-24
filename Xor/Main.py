@@ -34,7 +34,6 @@ def encode():
 	keys = keys1 + keys2 + keys3 + keys4 + keys5
 	keys = keys + keys4 + keys3 + keys2 +keys1 + keys
 
-	print(len(keys))
 
 	message_en_binaire = '0' + bin(int.from_bytes(message.encode(), 'big'))[2:]
 	keys_en_binaire = '0' + bin(int.from_bytes(keys.encode(), 'big'))[2:]
