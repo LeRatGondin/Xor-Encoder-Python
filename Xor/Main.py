@@ -17,14 +17,24 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-from hashlib import sha256
+from hashlib import sha256 , md5 , sha224 , sha512 , sha1
+
 import binascii
 import os
 def encode():
 	message = input("	Entrez le message a chiffrer : ")
 	key = input("	Entrez la clé : ")
 
-	keys = str(sha256(key.encode ('ascii')).hexdigest())
+	keys1 = str(sha256(key.encode ('ascii')).hexdigest())
+	keys2 = str(md5(key.encode ('ascii')).hexdigest())
+	keys3 = str(sha224(key.encode ('ascii')).hexdigest())
+	keys4 = str(sha512(key.encode ('ascii')).hexdigest())
+	keys5 = str(sha1(key.encode ('ascii')).hexdigest())
+
+	keys = keys1 + keys2 + keys3 + keys4 + keys5
+	keys = keys + keys4 + keys3 + keys2 +keys1 + keys
+
+	print(len(keys))
 
 	message_en_binaire = '0' + bin(int.from_bytes(message.encode(), 'big'))[2:]
 	keys_en_binaire = '0' + bin(int.from_bytes(keys.encode(), 'big'))[2:]
@@ -45,14 +55,22 @@ def encode():
 			a = a + 1
 
 		result = resultat_binaire
-		print(f'	Voici votre message encodé {result}')
+		print(f'	Voici votre message chiffré {result}')
 	except IndexError:
 		print("	Votre clé est trop petite pour votre message veuillez l'agrandir")
 
 def decode():
-	message = input("	Entrez le message a decrypter : ")
+	message = input("	Entrez le message a dechiffrer : ")
 	key = input("	Entrez la clé : ")
-	keys = str(sha256(key.encode ('ascii')).hexdigest())
+
+	keys1 = str(sha256(key.encode ('ascii')).hexdigest())
+	keys2 = str(md5(key.encode ('ascii')).hexdigest())
+	keys3 = str(sha224(key.encode ('ascii')).hexdigest())
+	keys4 = str(sha512(key.encode ('ascii')).hexdigest())
+	keys5 = str(sha1(key.encode ('ascii')).hexdigest())
+
+	keys = keys1 + keys2 + keys3 + keys4 + keys5
+	keys = keys + keys4 + keys3 + keys2 +keys1 + keys
 
 	message_en_binaire = message
 	keys_en_binaire = '0' + bin(int.from_bytes(keys.encode(), 'big'))[2:]
