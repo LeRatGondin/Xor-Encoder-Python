@@ -37,7 +37,8 @@ def encode():
 
 	message_en_binaire = '0' + bin(int.from_bytes(message.encode(), 'big'))[2:]
 	keys_en_binaire = '0' + bin(int.from_bytes(keys.encode(), 'big'))[2:]
-
+	while len(message_en_binaire) >> len(keys_en_binaire):
+        	keys_en_binaire += keys_en_binaire
 	liste_message = list(message_en_binaire)
 	liste_key = list(keys_en_binaire)
 
@@ -73,7 +74,8 @@ def decode():
 
 	message_en_binaire = message
 	keys_en_binaire = '0' + bin(int.from_bytes(keys.encode(), 'big'))[2:]
-
+	while len(message_en_binaire) >> len(keys_en_binaire):
+        	keys_en_binaire += keys_en_binaire
 	liste_message = list(message_en_binaire)
 	liste_key = list(keys_en_binaire)
 
