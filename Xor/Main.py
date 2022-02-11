@@ -125,4 +125,3 @@ if __name__ == '__main__':
         encode()
     if mode == "1":
         decode()
-    input()
