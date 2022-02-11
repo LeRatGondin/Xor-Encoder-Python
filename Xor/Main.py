@@ -95,6 +95,10 @@ def decode():
 		byte_number = binary_int.bit_length() + 7 // 8
 		binary_array = binary_int.to_bytes(byte_number, "big")
 		result = binary_array.decode()
+		result_list = list(result)
+    		first_char = result_list[1]
+   		while result.startswith(first_char):
+        		result = result[1:]
 		print(f'	Voici votre message decodé : {result}')
 	except ValueError:
 		print('Vous devez entrer une clé et/ou un message valide')
